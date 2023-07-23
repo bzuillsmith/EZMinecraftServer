@@ -1,3 +1,5 @@
+$localMinecraftServerPath = "E:\Minecraft\Server";
+
 $javaVersionCheckResult = & java --version; # Keep for next command to work
 if (-not $?) {
     Write-Host "Java is not installed. Installing jdk from 'https://download.oracle.com/java/19/latest/jdk-19_windows-x64_bin.exe'";
@@ -6,9 +8,6 @@ if (-not $?) {
     & "$env:Temp\jdk-19_windows-x64_bin.exe" /s # Other possible options: /L=1033 /v"/qn INSTALLDIR=C:\Program Files\Java\jdk-19";
     Write-Host "... complete"
 }
-
-$version = "1.20.1";
-$localMinecraftServerPath = "E:\Minecraft\Server";
 
 Write-Host "Fetching minecraft"
 # Some kind of firewall or rate limiter only allows a few requests before blocking requests basic headers. Need these look more legitimate.
