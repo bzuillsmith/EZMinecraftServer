@@ -79,9 +79,6 @@ try {
 }
 
 try {
-    # Debugging by specifying the link directly
-    $minecraftServerDownloadUrl = "https://piston-data.mojang.com/v1/objects/5b868151bd02b41319f54c8d4061b8cae84e665c/server.jar"
-    
     $serverJarPath = "$currentVersionPath\server.jar"; # Define the path for the server.jar file
     $serverJarExists = Test-Path $serverJarPath -PathType Leaf;
     if (-not $serverJarExists) {
